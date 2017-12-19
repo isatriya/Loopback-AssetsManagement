@@ -13,16 +13,16 @@ pipeline {
                 """
             }
         }
-        stage('Install') { 
+        stage('Install all dependencies') { 
             steps {
                 dir ('src') {
                     sh 'pwd'
+                    sh 'npm install'
                 }                
-                // sh 'npm install'
-                // sh 'cd ..'
-                // sh 'cd ui/'
-                // sh 'npm install'
-                // sh 'cd ..'
+                dir ('ui') {
+                    sh 'pwd'
+                    sh 'npm install'
+                }
             }
         }
         // stage('Start mongodb') { 
