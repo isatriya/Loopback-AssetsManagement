@@ -32,6 +32,7 @@ pipeline {
         stage('Unit test') {
             steps {
                 sh 'cd src/'
+                sh 'pwd'
                 script {
                     def testOut = sh(script: """
                     Xvfb :99 -screen 0 1024x768x16 &> xvfb.log &
