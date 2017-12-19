@@ -15,8 +15,9 @@ pipeline {
         }
         stage('Install') { 
             steps {
-                sh 'cd src'
-                sh 'pwd'
+                dir ('src') {
+                    sh 'pwd'
+                }                
                 // sh 'npm install'
                 // sh 'cd ..'
                 // sh 'cd ui/'
