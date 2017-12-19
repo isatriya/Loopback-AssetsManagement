@@ -19,7 +19,7 @@ pipeline {
                 sh 'cd src/'
                 sh 'npm install'
                 sh 'cd ..'
-                sh 'cd u/i'
+                sh 'cd ui/'
                 sh 'npm install'
                 sh 'cd ..'
             }
