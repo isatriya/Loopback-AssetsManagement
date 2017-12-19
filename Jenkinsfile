@@ -16,10 +16,10 @@ pipeline {
         stage('Install') { 
             steps {
                 sh 'npm install'
-                sh 'cd /src'
+                sh 'cd src/'
                 sh 'npm install'
                 sh 'cd ..'
-                sh 'cd /ui'
+                sh 'cd u/i'
                 sh 'npm install'
                 sh 'cd ..'
             }
@@ -31,7 +31,7 @@ pipeline {
         }
         stage('Unit test') {
             steps {
-                sh 'cd /src'
+                sh 'cd src/'
                 script {
                     def testOut = sh(script: """
                     Xvfb :99 -screen 0 1024x768x16 &> xvfb.log &
