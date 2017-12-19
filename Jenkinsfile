@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Install') { 
             steps {
-                sh 'cd src/'
+                sh 'cd src'
                 sh 'pwd'
                 // sh 'npm install'
                 // sh 'cd ..'
